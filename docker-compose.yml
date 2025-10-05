@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  go-course:
+    build: .
+    volumes:
+      - ./app:/usr/src/app # Mount local app folder for live editing
+    ports:
+      - "8080:8080"
+    command: go run main.go
